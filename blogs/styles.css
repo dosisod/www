@@ -1,0 +1,78 @@
+:root {
+  --accent: #ddd;
+  --background: #0a0a0a;
+  --anchor: #555;
+}
+* {
+  background: var(--background);
+  color: white;
+  font-family: monospace;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4 {
+  padding: 0.5em 0 0.5em 0;
+  margin: 1em 0 0 0;
+  color: white;
+  font-weight: bold;
+  text-decoration: underline var(--background);
+}
+h1 {
+  color: var(--accent);
+  font-size: 3em;
+}
+h2::before {
+  content: "# ";
+  color: var(--anchor);
+  text-decoration: underline var(--background);
+}
+h3::before {
+  content: "## ";
+  color: var(--anchor);
+  text-decoration: underline var(--background);
+}
+h4::before {
+  content: "### ";
+  color: var(--anchor);
+  text-decoration: underline var(--background);
+}
+.content {
+  width: calc(100% - 10em);
+  padding: 5em;
+  font-size: calc(0.5vw + 0.5em);
+}
+@media only screen and (min-device-width: 480px) {
+  .content {
+    width: 50%;
+    padding: 0;
+    transform: translate(50%);
+    position: relative;
+    padding-bottom: 1em;
+  }
+}
+a.user {
+  color: #3896d9;
+  font-family: monospace;
+  font-weight: bold;
+}
+code {
+  padding: 1px;
+  filter: invert(1);
+  border-radius: 4px;
+}
+kbd {
+  padding:1px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+}
+p {
+  line-height: 1.25em;
+  padding: 1em 0 1em 0;
+}
+img {
+  width: 100%;
+}

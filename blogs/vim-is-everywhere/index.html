@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+
+<link rel=stylesheet href="../styles.css" />
+
+<div class="content">
+  <h1>Vim is Everywhere</h1>
+  <span>by <a href="https://github.com/dosisod" class="user">@dosisod</a></span>
+
+  <p></p>
+
+  <a href="#why-should-i-care"><h2>Why should I care?</h2></a>
+
+  <p>
+    Lots of people will tell you how powerful Vim is,
+    and how much time you can save.
+    A lot of their arguments are correct, but I want to take
+    a different approach: Vim is all around you, and by
+    showing all of the things it has influenced, perhaps I might
+    convince you to start using it.
+  </p>
+
+  <a href="#background"><h2>Background</h2></a>
+
+  <p>
+    For starters, <code>vim</code> (VI-iMproved) came out in 1991. Its
+    predessesor, <code>vi</code>, came out in 1979. <code>neovim</code>
+    , a more modern fork of <code>vim</code> came out in 2014. In general,
+    whenever someone says "vim", they are normally talking about the core
+    movements that <code>vi</code> provides, and the improved featureset
+    of vim (unless otherwise noted).
+  </p>
+
+  <a href="#vim-on-the-web"><h2>Vim on the web</h2></a>
+
+  <p>
+    In vim, <kbd>/</kbd> is used to start searching for something. On the
+    Vue website (which is powered by <a href="https://www.algolia.com/">Algolia</a>),
+    <kbd>/</kbd> is used to start searching for something:
+  </p>
+
+  <img src="./img/vue-docs.done.gif" />
+
+  <p>
+    On <a href="https://duckduckgo.com">duckduckgo</a>, you can use <kbd>j</kbd>
+    to move down a search result, and <kbd>k</kbd> to go up one. In vim, the
+    <kbd>j</kbd>/<kbd>k</kbd> keys are also used to go up and down a line:
+  </p>
+
+  <img src="./img/dgg.done.gif" />
+
+  <p>
+    In vim, <kbd>g</kbd> can be followed up with many other characters to provide
+    easy access to a bunch of features, such as <kbd>g</kbd><kbd>f</kbd> to go to
+    the file name under the cursor, <kbd>g</kbd><kbd>d</kbd> to go to the
+    definition of a function/variable, and <kbd>g</kbd><kbd>g</kbd> to go to the
+    top of the file. Many websites offer keyboard shortcuts, starting  with
+    <kbd>g</kbd>, which are used to navigate around:
+  </p>
+
+  <b>GitHub:</b>
+  <img src="./img/github-shortcuts.png" />
+
+  <p></p>
+
+  <b>GitLab:</b>
+  <img src="./img/gitlab-shortcuts.png" />
+
+
+  <a href="#vim-in-your-ide"><h2>Vim in your IDE</h4></a>
+
+  <p>
+    Specifically I am talking about VSCode, but your text editor might
+    have similar features. In vscode, when you open the command pallete,
+    you can type <code>:123</code> to go to line 123, the same way you
+    would do it in vim:
+  </p>
+
+  <b>VSCode:</b>
+  <img src="./img/vscode-line.png" />
+
+  <a href="#vim-in-your-terminal"><h2>Vim in your terminal</h4></a>
+
+  <p>
+    Now there are an infinite amount of examples I could use here, but I will
+    try to stick to using just what is readily/probably already avaiable on
+    your system.
+  </p>
+
+  <p>
+    Firstly, in <code>bash</code>, you can run <code>set -o vi</code> to enable
+    vi-like movements as you edit (<kbd>j</kbd>/<kbd>k</kbd> to go to the
+    next/previous command, <kbd>h</kbd>/<kbd>l</kbd> to move left/right
+    in the current line, <kbd>x</kbd> to delete the currently selected
+    character, etc).
+  </p>
+
+  <img src="./img/bash.gif" />
+
+  <p>
+    Whenever you type <code>git commit</code> in your terminal, an editor will
+    open up, and sometimes, it will be vim (this dependes on the <code>EDITOR</code>
+    and <code>VISUAL</code> environment variables). The same thing happens
+    when you do an interactive rebase, or a <code>git merge</code> (sometimes).
+  </p>
+
+  <img src="./img/git-commit.gif" />
+
+  <p>
+    Sometimes when running commands with lots of output, it will open it in
+    a pager, usually <code>less</code> or <code>more</code>. You can check
+    by running <code>readlink -f $(which pager)</code>. In less, you can use
+    the arrow keys to move around, but you can also use <kbd>j</kbd>/<kbd>k</kbd>k
+    to move up and down, <kbd>u</kbd><kbd>d</kbd> to move up and down (half a page),
+    <kbd>/</kbd> to search, <kbd>n</kbd>/<kbd>N</kbd> to go to next and previous
+    search result respectivley, and <kbd>q</kbd> to quit. All of these are similar to
+    vim, except for quitting (in vim it is <code>:q</code> instead).
+  </p>
+
+  <img src="./img/man.gif" />
+
+</div>
+
+</body>
+</html>
